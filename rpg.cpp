@@ -12,18 +12,37 @@ clang++ -g rpg.cpp -o rpg
 
 int main(){
     //setup player, health, and inventory
-    int player = true;
-    int health = 100;   
-    char keydown;
-    std::vector<int> inventory;
-    inventory.push_back(4);
-    std::cin>>keydown;
-    if (keydown=='i'){
-        std::cout<<"you have "<<"\n";
-        for (int i=0;inventory[i];i++){
-            std::cout<<inventory[i]<<", ";
+        int player;
+        int health = 100;   
+        char keydown;
+        std::string player_name;
+        std::vector<int> inventory;
+        if (keydown=='i'){
+            std::cout<<"you have "<<"\n";
+            for (int i=0;inventory[i];i++){
+                std::cout<<inventory[i]<<", ";
+            }
         }
-    }
+    //introduction
+        char start;
+        std::cout<<"what is your name gangsta?"<<"\n";
+        std::cin>>player_name;
+        std::cout<<"hello "<<player_name<<" to the world of 1920s Chicago"<<"\n";
+        std::cout<<"here you'll face gangs, mobsters, and crime. also a lot a alcohol"<<"\n";
+        std::cout<<"this'll be the start of your journey. whether you decide to be an incorruptible bastion of good or a cop with their own agenda, that is up for you to decide"<<"\n";
+        std::cout<<"if you want to start right now, click 'y'. otherwise click 'n'"<<"\n";
+        std::cin>>start;
+        switch(start){
+            case 'n':
+                break;
+            case 'y':
+                std::cout<<"let's go officer. time to go back home to Chicago";
+        }
+    //story start
+        std::cout<<"Wake up."<<"\n";
+        std::cout<<"Wake up "<<player_name<<"!"<<"\n";
+        
+        
 
     return 0;
 }
