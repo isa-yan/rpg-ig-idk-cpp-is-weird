@@ -41,12 +41,8 @@ int main(){
                 std::cout<<"let's go officer. time to go back home to Chicago";
         }
 
-    //story start
-       std::vector<std::string> script;
-       script.push_back("meow");
-            for (int i=0;script[i];i++){
-                std::cout<<script[i]<<", ";
-            }
+    //script broke in previous version and i didn't know why so that's gone now! :D
+
 
         
         
