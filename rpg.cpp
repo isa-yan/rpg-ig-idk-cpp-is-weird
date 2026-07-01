@@ -3,6 +3,7 @@
 #include <random>
 #include <algorithm>
 #include <iostream>
+//#include <tuple>
 
 /*
 clang++ -g rpg.cpp -o rpg
@@ -12,10 +13,10 @@ clang++ -g rpg.cpp -o rpg
 
 int main(){
     //setup player, health, and inventory
-        int player;
         int health = 100;   
         char keydown;
         std::string player_name;
+        //std::tuple<std::string, int> player();
         std::vector<int> inventory;
         if (keydown=='i'){
             std::cout<<"you have "<<"\n";
@@ -23,6 +24,7 @@ int main(){
                 std::cout<<inventory[i]<<", ";
             }
         }
+
     //introduction
         char start;
         std::cout<<"what is your name gangsta?"<<"\n";
@@ -38,9 +40,14 @@ int main(){
             case 'y':
                 std::cout<<"let's go officer. time to go back home to Chicago";
         }
+
     //story start
-        std::cout<<"Wake up."<<"\n";
-        std::cout<<"Wake up "<<player_name<<"!"<<"\n";
+       std::vector<std::string> script;
+       script.push_back("meow");
+            for (int i=0;script[i];i++){
+                std::cout<<script[i]<<", ";
+            }
+
         
         
 
