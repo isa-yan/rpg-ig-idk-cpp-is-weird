@@ -38,11 +38,16 @@ int main(){
             case 'n':
                 break;
             case 'y':
-                std::cout<<"let's go officer. time to go back home to Chicago";
+                std::cout<<"let's go officer. time to go back home to Chicago"<<"\n";
         }
 
-    //script broke in previous version and i didn't know why so that's gone now! :D
-
+    //story start
+        std::vector<std::string> script_A;
+        script_A.push_back("You open your eyes to find yourself in the police station");
+        script_A.push_back("meow");
+            for (int i=0;script_A[i].empty()==false;i++){
+                std::cout<<script_A[i]<<", ";
+            }
 
         
         
