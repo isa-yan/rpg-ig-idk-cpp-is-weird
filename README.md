@@ -17,3 +17,8 @@ so step 1
 5. type './rpg'
 6. bypass warning cuz im so trustworthy trust
 
+### heres a picture
+<img width="1984" height="478" alt="image" src="https://github.com/user-attachments/assets/2754d364-f826-4ff1-90b7-afaf9b7eef47" />
+
+## Contribution
+um you can contribute by givivng my money please owo
