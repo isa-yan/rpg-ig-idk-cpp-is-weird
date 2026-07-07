@@ -118,7 +118,7 @@ int main(){
                     inventory_choices[0]==false;
 
             }else{
-                cin>>keydown;
+               cout<<"you choose to take nothing. your pants were nice. you ain't creasing these pockets"<<"\n";
             }
 
             vector<string> ambush_script = {
@@ -149,12 +149,39 @@ int main(){
                 "he smiles",
                 "'Dear Captain Parker's going to see why he should never cross the outfit'"
 
-
             };
 
+            for (int i=0; i<ambush_script.size();i++){
+                cin>>keydown;
+                if (keydown=='e'){
+                    cout<<ambush_script[0]<<"\n";
 
+                    if (inventory_choices[0]==true){
+
+                    }
+                    if (inventory_choice[1]==true){
+
+                    }
+            }
+
+                
+            }
+
+
+    
     
 
 
     return 0;
+}
+
+void loop(script){
+    for (int i=0; i<script.size();i++){
+        cin>>keydown;
+        if (keydown=='e'){
+            cout<<script[i]<<"\n";
+        }
+    }
+
+
 }
