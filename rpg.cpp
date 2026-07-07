@@ -42,14 +42,21 @@ clang++ -std=c++17 -g rpg.cpp -o rpg
         "'You sure?'",
         "'I'm sure sir.'",
         "'Alright then', he smiles, 'I'm glad to hear that'",
+        "'It's been a slow few days, innit boy?', he smiles again",
+        "'I suppose'",
+        "'As reserved as ever eh?,' he laughs out loud, 'your pappy would be proud of ya'",
+        "'I do hope so', you answer, voice cracking a bit, 'you really think so Captain?",
+        "'Of course'",
+        "The Captain ruffles your hair. 'You're my best friend's boy, I know he'd be as proud of you as I am.'",
         "'I was originally here to return your gun that you left in the meeting room', he adds, placing it gently on the table you've been moping by for hours at this point",
         "'I also have some cash for you too', Captain Parker smiles softly at you",
         "'I know your family has been struggling for a while now'",
         "'Take this as a token of appreciation for your efforts', he straightens his cap, 'get your mam something nice, eh?'",
-        "You take a quick skim. Looks to be around 2k. Too much for a lowly officer like yourself",
+        "You take a quick skim. Looks to be around 2k. Too much for a officer like yourself",
         "'I can't take this, Captain Parker', you state as you search for a shadow or a twist of the wind that captain might have left",
         "yet all you can hear are the faint footsteps of Captain Parker, dissipating and tapping lightly against the mahagony floors",
         "you stare the cash, wondering whether to pick up your gun or the wad of cash Captain Parker handed you."
+        "'Goddamit it sir,' you mutter under your breathe as you long for his shadow",
 
     };
 
@@ -81,101 +88,77 @@ clang++ -std=c++17 -g rpg.cpp -o rpg
         "he smiles",
         "'Dear Captain Parker's going to see why he should never cross the outfit'"
 
+
     };
 
     vector<string> gun_script = {
-        "you "
+        "you hold the gun up, fingers trembling",
+        "you aren't scared of him, at least",
+        "not as much as you should be scared of him",
+        "god bless the usa you grimace",
+        "you aim",
+        "the man still has his back turned",
+        "you shoot",
+        "too late tho",
+        "the man falls",
+        "yet...",
+        "as you stand up",
+        "Captain Parker's body sits still",
+        "blood seeping out of his chest",
+        "you cradle his body as he looks at you",
+        "'I wasn't a good man'",
+        "'don't say that', you cry, tears dripping down your face snot rolling down your lips as you cry silently",
+        "he smiles",
+        "'I deserve this, son'",
+        "'I've done things I ain't proud about'",
+        "'There's a reason the outfits are after me'",
+        "'Why sir?' you ask, smiling faintly at the man in your arms",
+        "'I...'",
+        "He sighs, and then coughs",
+        "blood rushed from his nose and his mouth as his eyes start tearing up",
+        "'Oh, my boy....'",
+        "'I always tried to be a role model for you'",
+        "'I know'",
+        "'But the outfits go the better of me'",
+        "'It was too much money, son'",
+        "'Capn?'",
+        "'Oh... my boy'",
+        "'I'm so sorry'",
+        "'CAPTAIN?'",
+        "'CAPTAIN?'",
+        "'CAPTAIN?'",
+        "you cry",
+        "as this time of your life wraps up",
+        "GAME END"
+
     };
 
     vector<string> cash_script = {
-        ""
+        "'DON'T HURT CAPTAIN NED'",
+        "you yell as the mobster turns to you",
+        "'And what'll you offer me, little officer?' he taunts",
+        "'this cash', you nmutter, as the mobster inspects the wad of paper you handed him",
+        "the mobster smiles as a bullet shoots through his heart",
+        "Captain Parker stands up, his side bleeding but with his gun in his hand",
+        "'Good job, son', he says",
+        "'Did... did you see that sir?' you tremble",
+        "'I....I'm so sorry I just wanted to---'",
+        "'No, I understand, son', Captain Parker smiles",
+        "'How do you think I got into this mess in the first place?'"
+
+    
     };
 
 
 //setup player, health, and inventory
     int health = 100;   
-    char keydown;
     string player_name;
     //std::tuple<std::string, int> player();
     vector<string> inventory;
 
 
-
-int main(){
-        if (keydown=='i'){
-            ::cout<<"you have "<<"\n";
-            for (int i=0;i<inventory.size();i++){
-                cout<<inventory[i]<<", ";
-                cin>>keydown;
-            }
-        }
-
-    //introduction
-        loop(script_A);
-            char start;
-            cout<<"press 'e' to go forward"<<"\n";
-            cout<<"what's your name?"<<"\n";
-            cin>>player_name;
-            cout<<"hello "<<player_name<<" press e to continue";
-            cin>>keydown;
-
-
-
-            cin>>start;
-
-            switch(start){
-                case 'n':
-                    break;
-                case 'y':
-                    cout<<"let's go officer. time to go back home to Chicago"<<"\n";
-            }
-    
-            
-
-    //story start
-
-        loop(ambush_script);
-            cout<<"PRESS 'G' TO TAKE THE GUN"<<"\n";
-            cout<<"OR PRESS 'C' TO TAKE THE WAD OF CASH"<<"\n";
-
-            vector<bool> inventory_choices = {false,false};
-        
-            cin>>keydown;
-            if (keydown=='g'){
-                inventory_choices[0]=true;
-                inventory.push_back("gun");
-                cout<<"with a strange sense of bitter pride deepset in your heart, you took your service weapon"<<"\n";
-                if (inventory_choices[0]==true)
-                    inventory_choices[1]=false;
-
-            }else if (keydown=='c'){
-                inventory_choices[1]=true;
-                inventory.push_back("cash");
-                cout<<"you falter a bit, your stomach churning with giddiness and guilt, before picking up the wad of cash"<<"\n";
-                if (inventory_choices[1]==true)
-                    inventory_choices[0]==false;
-
-            }else{
-               cout<<"you choose to take nothing. your pants were nice. you ain't creasing these pockets"<<"\n";
-            }
-
-
-
-            if (inventory_choices[0]==true){
-                gun_script;
-            }
-
-            if (inventory_choices[1]==true){
-                cash_script;
-            }
-            
-
-
-
-    return 0;
-}
-
 void loop(vector<string>script){
+    char keydown;
     for (int i=0; i<script.size();i++){
         cin>>keydown;
         if (keydown=='e'){
@@ -185,4 +168,82 @@ void loop(vector<string>script){
     }
 
 
+}
+
+
+int main(){
+    char keydown;
+        if (keydown=='i'){
+            ::cout<<"you have "<<"\n";
+            for (int i=0;i<inventory.size();i++){
+                cout<<inventory[i]<<", ";
+                cin>>keydown;
+            }
+        }
+
+    //introduction
+        char start;
+        cout<<"press 'e' to go forward"<<"\n";
+        cout<<"what's your name?"<<"\n";
+        cin>>player_name;
+        cout<<"hello "<<player_name<<" press e to continue";
+        cin>>keydown;
+
+
+
+        cin>>start;
+
+        switch(start){
+            case 'n':
+                break;
+            case 'y':
+                cout<<"let's go officer. time to go back home to Chicago"<<"\n";
+        }
+        loop(intrograph);
+    
+            
+
+    //story start
+
+        loop(script_A);
+            cout<<"PRESS 'G' TO TAKE THE GUN"<<"\n";
+            cout<<"OR PRESS 'C' TO TAKE THE WAD OF CASH"<<"\n";
+
+            vector<bool> inventory_choices = {false,false};
+        
+            cin>>keydown;
+            if (keydown=='g'||keydown=='G'){
+                inventory_choices[0]=true;
+                inventory.push_back("gun");
+                cout<<"with a strange sense of bitter pride deepset in your heart, you took your service weapon"<<"\n";
+                if (inventory_choices[0]==true)
+                    inventory_choices[1]=false;
+
+            }else if (keydown=='c'||keydown=='C'){
+                inventory_choices[1]=true;
+                inventory.push_back("cash");
+                cout<<"you falter a bit, your stomach churning with giddiness and guilt, before picking up the wad of cash"<<"\n";
+                if (inventory_choices[1]==true)
+                    inventory_choices[0]=false;
+
+            }else{
+               cout<<"you choose to take nothing. your pants were nice. you ain't creasing these pockets"<<"\n";
+            }
+
+
+        
+        loop(ambush_script);
+
+            if (inventory_choices[0]==true){
+                loop(gun_script);
+            }
+
+            if (inventory_choices[1]==true){
+                loop(cash_script);
+            }
+            
+
+
+
+    return 0;
 }
