@@ -1,13 +1,18 @@
 ## What this is about:
 So basically I do Model UN and I'm writing a dossier for characters in a 1920s Chicago Police thing
-I'm very proud of it and I just thought hey not make it into a shitty text based RPG. <br>
+<br>
+I'm very proud of it and I just thought hey not make it into a shitty text based RPG. 
+<br>
 Basically you play as a police officer and your supervising officer, Ned Parker and you are talking but then boom! Something happens :o
 But spoilers aside yea
+<br>
 This is made in C++ and my blood and my brains and gemini helped becuase i require validation for everything i do :D
+<br>
 Only supported on mac tho i dont like windows :p unless they hire me one day then i absolutely love microsoft
 
 ## How to run
 so you're on mac im assuming
+<br>
 so step 1
 
 1. download the releases from releases
